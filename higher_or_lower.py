@@ -3,25 +3,31 @@ import random
 asks user to input a number 1-10
 """
 def get_user_guess():
-    return input("Enter a number 1-10\n")
+    num =  input("Enter a number 1-10\n")
+    return num
 
 def get_random_number():
-    return random.randrange(10)
+    num = random.randrange(10)
+    return num
 
-def compareGuess(guess, random_num):
-    if guess > random_num:
-        print("too high")
-
-    elif guess < random_num:
-        print("too low")
-
+def compareGuess(guess, random):
+    result = " "
+    if guess > random:
+        result = "too high"
+    elif guess < random:
+        result = "too low"
     else:
-        print("right on the money")
-finalguess = get_user_guess
+        result = "correct guess"
+    return result
+        
+finalguess = int(get_user_guess())
 randomnumber = get_random_number()
-print(randomnumber)
-print(finalguess)
-compareGuess(finalguess, randomnumber)
+print("the number is: " + str(randomnumber))
+print(compareGuess(finalguess,randomnumber))
+
+
+
+    
 
 
 
