@@ -10,7 +10,7 @@ def name_input():
     name = input("Enter a name\n")
     return name
 
-h = 1
+
 
 greet(name_input())
 
